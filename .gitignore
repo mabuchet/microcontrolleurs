@@ -1,3 +1,7 @@
+# Librairies :
+# a priori accessibles sur internet
+lib/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
