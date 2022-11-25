@@ -15,6 +15,7 @@ La carte SD comprend 5 pins :
 - CS (également appelée SS pour Slave Select), active le module esclave ;
 - MOSI (Master Output, Slave Input) ;
 - MISO (Master Input, Slave Output).
+- SCK (signal d'horloge)
 
 Ici, on utilise le port SPI numéro 1. On connecte alors
 les pins du module de la carte SD comme suit :

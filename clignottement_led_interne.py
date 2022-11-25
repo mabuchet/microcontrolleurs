@@ -4,7 +4,7 @@ Date : 18 juillet 2022
 
 BUT :
 Faire clignoter N fois la LED incluse sur le Raspberry Pi Pico.
-La LED correspond au pin 25.
+La LED interne est connectée au pin 25.
 """
 
 # Imports :
@@ -12,7 +12,7 @@ from machine import Pin
 import time
 
 # Paramètres du clignotement :
-N = 10 # Nombre de cycles 
+N = 10 # Nombre de cycles
 duree_on = 1. # s
 duree_off = 1. # s
 
