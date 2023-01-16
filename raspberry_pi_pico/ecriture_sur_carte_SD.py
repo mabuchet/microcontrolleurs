@@ -7,9 +7,9 @@ Créer un fichier csv sur une carte SD et écrire des données dedans.
 
 Ici, les données sont fictives et sont simplement générées par une boucle for.
 
-En situation réelle, les données proviendront à priori d'un capteur.
+En situation réelle, les données proviendront a priori d'un capteur.
 
-La carte SD comprend 5 pins :
+La carte SD comprend 6 pins :
 - GND, la masse ;
 - VCC, l'alimentation (normalement, 3.3V, mais certaines cartes possèdent un deuxième pin d'alimentation pouvant recevoir 5V) ;
 - CS (également appelée SS pour Slave Select), active le module esclave ;
@@ -35,7 +35,7 @@ https://raw.githubusercontent.com/micropython/micropython/master/drivers/sdcard/
 from machine import Pin, SPI
 import sdcard
 import os
- 
+
 # Choix des pins :
 pin_MISO = Pin(12)
 pin_MOSI = Pin(11)
@@ -49,7 +49,7 @@ spi=SPI(port_SPI,baudrate=baudrate,sck=pin_SCK,mosi=pin_MOSI,miso=pin_MISO)
 
 # Initialisation de la carte SD :
 sd=sdcard.SDCard(spi,pin_CS)
-vfs=os.VfsFat(sd) 
+vfs=os.VfsFat(sd)
 os.mount(sd,'/sd')
 
 # Création d'un fichier (mode 'w' = mode d'écriture)
@@ -66,7 +66,7 @@ file.write(en_tete+"\n")
 for i in range(20) :
     ligne = "{0};{1}".format(i,i**2)
     file.write(ligne+"\n")
-    
+
 # Fermeture du fichier :
 file.close()
 
