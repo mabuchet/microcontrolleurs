@@ -5,18 +5,22 @@ Programme de base permettant d'écrire sur une carte SD.
 
 Dans ce programme : 
 - on teste l'existence du répertoire dans lequel on souhaite écrire ;
-- s'il existe, on écrit des données fictives dans un fichier csv.
+- s'il existe, on écrit des données fictives dans un fichier `txt`.
 
-Rq : En usage réel, les données proviendront a priori de capteurs.
+Rq : En usage réel, les données proviendront a priori de capteurs., 
+ici les données écrites sont fictives.
 
 Pour que le programme s'exécute correctement, il faut donc que le répertoire
 dans lequel on souhaite écrire existe sur la carte SD (voir la chaine de caractère 
 stockée dans la variable 'dirName').
 
-ATTENTION : Le programme est conçu pour vérifier l'existance des fichiers
-avant d'écrire dessus. Cependant, il existe tout de même un risque de pertes
-de données. Il est fortement conseillé de copier dès que possible les données 
-acquises sur un support plus sûr que la carte SD.
+Le programme crée le fichier `txt' dans lequel il écrit.
+
+ATTENTION : Le programme est conçu pour vérifier la non-existance des fichiers
+avant d'écrire dessus (afin de ne pas effacer un fichier déjà existant). 
+Cependant, il existe tout de même un risque de pertes de données. Il est 
+fortement conseillé de copier dès que possible les données acquises sur un 
+support plus sûr que la carte SD.
 
 Pour modifier les données à enregistrer, il faut :
 - modifier la chaîne de caractère passée à la fonction 'ecriture_header' ;
